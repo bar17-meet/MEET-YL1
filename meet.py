@@ -1,7 +1,7 @@
 from turtle import *
 import random
 
-mouse = Turtle() # this line is making a turlte object that later will follow the mouse
+mouse=clone()
 mouse.hideturtle() # this line to hide the mouse turtle
 mouse.penup() # this line tells mouse turtle to pen up so it will not draw line when the mouse move
 canvas=getcanvas() # the canvas is the area that the turtle is moving (the white background)
@@ -84,7 +84,7 @@ def move_cell(cell):
 	r = cell.get_radius()
 	cell.goto(x+dx,y+dy+r)
 
-# this function takes a list of rectangles and draws them on the screen
+# this function takes a list of cells and draws them on the screen
 def move_cells(cells):
 	hideturtle()
 	for cell in cells:
@@ -161,4 +161,4 @@ def get_random_y():
 ######################################################################
 
 canvas.bind("<Motion>", movearound) # this line tells turtle to call the function movearound (we defined above) everytime the mouse moves
-getscreen().listen() # this line tells the screen in turtle to listen to the keyboard and the mouse, because we are using them
+getscreen().listen() # this line tells the screen in turtle to listen to the keyboard and the mouse, because we are using themmouse = Turtle() # this line is making a turlte object that later will follow the mouse
